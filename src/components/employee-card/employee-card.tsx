@@ -10,7 +10,6 @@ export class EmployeeCard {
 
   @Prop() endPoint: string = '/assets/employees-list-1.json';
   @Prop() currencySymbol: string = '€';
-  @Prop() employeeId: number = 1;
 
   async getEmployee() {
     const response = await fetch(this.endPoint);
@@ -22,12 +21,10 @@ export class EmployeeCard {
   }
 
   render() {
-    const employee = this.employees.find(emp => emp.id === this.employeeId);
-
     return (
       <Host>
         <div>
-          {employee ? (
+          {this.employees.map(employee => (
             <div>
               <h2>{employee.name}</h2>
               <p>
@@ -40,9 +37,7 @@ export class EmployeeCard {
                 {employee.salary}
               </p>
             </div>
-          ) : (
-            <p>Employee with ID {this.employeeId} not found.</p>
-          )}
+          ))}
         </div>
       </Host>
     );

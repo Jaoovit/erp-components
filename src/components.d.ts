@@ -8,22 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface EmployeeCard {
         "currencySymbol": string;
-        "employeeId": number;
         "endPoint": string;
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
     }
 }
 declare global {
@@ -33,40 +18,17 @@ declare global {
         prototype: HTMLEmployeeCardElement;
         new (): HTMLEmployeeCardElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLElementTagNameMap {
         "employee-card": HTMLEmployeeCardElement;
-        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface EmployeeCard {
         "currencySymbol"?: string;
-        "employeeId"?: number;
         "endPoint"?: string;
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
     }
     interface IntrinsicElements {
         "employee-card": EmployeeCard;
-        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -74,7 +36,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "employee-card": LocalJSX.EmployeeCard & JSXBase.HTMLAttributes<HTMLEmployeeCardElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }
