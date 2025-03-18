@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Noah Lewis",
+    "title": "Product Manager",
+    "department": "Product",
+    "salary": 105000,
+    "experience_level": "Senior"
+  },
+  {
+    "id": 2,
+    "name": "Ava Mitchell",
+    "title": "Legal Advisor",
+    "department": "Legal",
+    "salary": 90000,
+    "experience_level": "Senior"
+  },
+  {
+    "id": 3,
+    "name": "William Nelson",
+    "title": "Customer Support Representative",
+    "department": "Customer Service",
+    "salary": 45000,
+    "experience_level": "Junior"
+  },
+  {
+    "id": 4,
+    "name": "Charlotte Owens",
+    "title": "Electrical Engineer",
+    "department": "Engineering",
+    "salary": 87000,
+    "experience_level": "Mid"
+  },
+  {
+    "id": 5,
+    "name": "Benjamin Parker",
+    "title": "Full Stack Developer",
+    "department": "IT",
+    "salary": 95000,
+    "experience_level": "Senior"
+  },
+  {
+    "id": 6,
+    "name": "Amelia Quinn",
+    "title": "AI Researcher",
+    "department": "Research",
+    "salary": 120000,
+    "experience_level": "Senior"
+  },
+  {
+    "id": 7,
+    "name": "Daniel Roberts",
+    "title": "Mechanical Engineer",
+    "department": "Engineering",
+    "salary": 80000,
+    "experience_level": "Mid"
+  },
+  {
+    "id": 8,
+    "name": "Evelyn Smith",
+    "title": "Operations Manager",
+    "department": "Operations",
+    "salary": 97000,
+    "experience_level": "Senior"
+  },
+  {
+    "id": 9,
+    "name": "Henry Thompson",
+    "title": "Sales Executive",
+    "department": "Sales",
+    "salary": 72000,
+    "experience_level": "Mid"
+  },
+  {
+    "id": 10,
+    "name": "Harper Underwood",
+    "title": "Business Analyst",
+    "department": "Business",
+    "salary": 78000,
+    "experience_level": "Mid"
+  },
+  {
+    "id": 11,
+    "name": "Logan White",
+    "title": "Graphic Designer",
+    "department": "Design",
+    "salary": 58000,
+    "experience_level": "Junior"
+  }
+]
