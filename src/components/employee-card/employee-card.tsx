@@ -16,6 +16,11 @@ export class EmployeeCard {
     this.employees = await response.json();
   }
 
+  deleteEmployee(event: MouseEvent, id: number) {
+    event.preventDefault;
+    this.employees = this.employees.filter(emp => emp.id !== id);
+  }
+
   async componentWillLoad() {
     await this.getEmployee();
   }
@@ -36,6 +41,9 @@ export class EmployeeCard {
                 salary: {this.currencySymbol}
                 {employee.salary}
               </p>
+              <a href={`employee/${employee.id}`}>Details</a>
+              <a href={`employee/edit/${employee.id}`}>Edit</a>
+              <button onClick={event => this.deleteEmployee(event, employee.id)}>Delete</button>
             </div>
           ))}
         </div>

@@ -6,36 +6,62 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface DeleteButton {
+    }
     interface EmployeeCard {
         "currencySymbol": string;
         "endPoint": string;
     }
+    interface LinkButton {
+    }
 }
 declare global {
+    interface HTMLDeleteButtonElement extends Components.DeleteButton, HTMLStencilElement {
+    }
+    var HTMLDeleteButtonElement: {
+        prototype: HTMLDeleteButtonElement;
+        new (): HTMLDeleteButtonElement;
+    };
     interface HTMLEmployeeCardElement extends Components.EmployeeCard, HTMLStencilElement {
     }
     var HTMLEmployeeCardElement: {
         prototype: HTMLEmployeeCardElement;
         new (): HTMLEmployeeCardElement;
     };
+    interface HTMLLinkButtonElement extends Components.LinkButton, HTMLStencilElement {
+    }
+    var HTMLLinkButtonElement: {
+        prototype: HTMLLinkButtonElement;
+        new (): HTMLLinkButtonElement;
+    };
     interface HTMLElementTagNameMap {
+        "delete-button": HTMLDeleteButtonElement;
         "employee-card": HTMLEmployeeCardElement;
+        "link-button": HTMLLinkButtonElement;
     }
 }
 declare namespace LocalJSX {
+    interface DeleteButton {
+    }
     interface EmployeeCard {
         "currencySymbol"?: string;
         "endPoint"?: string;
     }
+    interface LinkButton {
+    }
     interface IntrinsicElements {
+        "delete-button": DeleteButton;
         "employee-card": EmployeeCard;
+        "link-button": LinkButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "delete-button": LocalJSX.DeleteButton & JSXBase.HTMLAttributes<HTMLDeleteButtonElement>;
             "employee-card": LocalJSX.EmployeeCard & JSXBase.HTMLAttributes<HTMLEmployeeCardElement>;
+            "link-button": LocalJSX.LinkButton & JSXBase.HTMLAttributes<HTMLLinkButtonElement>;
         }
     }
 }
