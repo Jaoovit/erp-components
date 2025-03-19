@@ -16,8 +16,7 @@ export class EmployeeCard {
     this.employees = await response.json();
   }
 
-  deleteEmployee(event: MouseEvent, id: number) {
-    event.preventDefault;
+  deleteEmployee(id: number) {
     this.employees = this.employees.filter(emp => emp.id !== id);
   }
 
@@ -43,7 +42,7 @@ export class EmployeeCard {
               </p>
               <a href={`employee/${employee.id}`}>Details</a>
               <a href={`employee/edit/${employee.id}`}>Edit</a>
-              <button onClick={event => this.deleteEmployee(event, employee.id)}>Delete</button>
+              <button onClick={() => this.deleteEmployee(employee.id)}>Delete</button>
             </div>
           ))}
         </div>
